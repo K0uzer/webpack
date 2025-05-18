@@ -9,6 +9,7 @@
         "build:prod:analyze": "webpack --env analyze=true --env mode=production",
         "build:mobile": "webpack --env mode=production --env platform=mobile",
         "build:desktop": "webpack --env mode=production --env platform=desktop",
+        "type:check": "tsc --noEmit",
         "dev": "webpack serve --env mode=development",
         "prod": "webpack serve --env mode=production",
         "lint": "eslint ."
@@ -21,7 +22,7 @@
         "@types/react": "18.2.25",
         "@types/react-dom": "18.2.11",
         "@types/webpack": "5.28.3",
-        "@types/webpack-bundle-analyzer": "^4.7.0",
+        "@types/webpack-bundle-analyzer": "4.7.0",
         "@types/webpack-dev-server": "4.7.2",
         "css-loader": "6.8.1",
         "html-webpack-plugin": "5.5.3",
@@ -36,9 +37,12 @@
         "webpack-dev-server": "4.15.1"
     },
     "dependencies": {
-        "@svgr/webpack": "^8.1.0",
+        "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
+        "@svgr/webpack": "8.1.0",
+        "fork-ts-checker-webpack-plugin": "9.0.0",
         "react": "18.2.0",
         "react-dom": "18.2.0",
+        "react-refresh-typescript": "^2.0.9",
         "react-router-dom": "6.16.0",
         "webpack-bundle-analyzer": "4.9.1"
     }
