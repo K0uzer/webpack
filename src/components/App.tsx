@@ -9,6 +9,14 @@ import classes from './App.module.scss'
 const App = () => {
     const [count, setCount] = useState(0)
 
+    function TODO() {
+        TODO2()
+    }
+
+    function TODO2() {
+        throw new Error('Error')
+    }
+    TODO()
     // if (__PLATFORM__ === 'desktop') {
     //     return <div>IS desktop PLATFORM</div>
     // }
